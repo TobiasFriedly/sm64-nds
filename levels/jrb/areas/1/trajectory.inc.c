@@ -1,0 +1,23 @@
+
+const Trajectory jrb_seg7_trajectory_unagi_1[] = {
+    TRAJECTORY_POS(0,   5300, -3800,  1200),
+    TRAJECTORY_POS(1,   3700, -3600,  1700),
+    TRAJECTORY_POS(2,   3400, -3400,  3500),
+    TRAJECTORY_POS(3,   3900, -3600,  4400),
+    TRAJECTORY_POS(4,   5300, -3800,  4400),
+    TRAJECTORY_POS(5,   6200, -4000,  2700),
+    TRAJECTORY_END(),
+};
+
+const Trajectory jrb_seg7_trajectory_unagi_2[] = {
+    TRAJECTORY_POS(0,   5381,     0,  2758),
+    TRAJECTORY_POS(1,   5803, -3130,  3036),
+    TRAJECTORY_POS(2,   4876, -3045,  2706),
+    TRAJECTORY_POS(3,   4313, -3246,  2736),
+    TRAJECTORY_POS(4,   3792, -3413,  3668),
+    TRAJECTORY_POS(5,   4971, -3130,  3688),
+    TRAJECTORY_POS(6,   5392, -3130,  3326),
+    TRAJECTORY_POS(7,   6341, -3130,  2450),
+    TRAJECTORY_POS(8,   9431, -3130,  1400),
+    TRAJECTORY_END(),
+};

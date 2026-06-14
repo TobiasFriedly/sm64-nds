@@ -1,0 +1,20 @@
+#ifndef NDS_ARM7_COPY_H
+#define NDS_ARM7_COPY_H
+
+#define NDS_COPY_FIFO_CHANNEL FIFO_USER_02
+#define NDS_COPY_MAX_CHUNK    0x2000
+
+struct NdsCopyCmd {
+    u32 dst;
+    u32 src;
+    u32 len;
+};
+
+#define NDS_WRAM_SAMPLE_BASE 0x037FF800
+#define NDS_WRAM_SAMPLE_SIZE 0xF000
+
+#define NDS_VRAMC_SAMPLE_BASE 0x06000000
+#define NDS_VRAMD_SAMPLE_BASE 0x06020000
+#define NDS_VRAM_BANK_SIZE    0x20000
+
+#endif

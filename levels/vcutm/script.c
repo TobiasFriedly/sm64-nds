@@ -1,0 +1,78 @@
+#include <ultra64.h>
+#include "sm64.h"
+#include "behavior_data.h"
+#include "model_ids.h"
+#include "seq_ids.h"
+#include "dialog_ids.h"
+#include "segment_symbols.h"
+#include "level_commands.h"
+
+#include "game/level_update.h"
+
+#include "levels/scripts.h"
+
+#include "actors/common1.h"
+
+#include "make_const_nonconst.h"
+#include "levels/vcutm/header.h"
+
+static const LevelScript script_func_local_1[] = {
+    OBJECT( MODEL_VCUTM_SEESAW_PLATFORM,    154, -1919, -6256,  0, 270, 0,  BPARAM2(0x07),  bhvSeesawPlatform),
+    OBJECT( MODEL_VCUTM_SEESAW_PLATFORM,  -2047, -3378, -2047,  0,   0, 0,  BPARAM2(0x07),  bhvSeesawPlatform),
+
+    OBJECT( MODEL_VCUTM_CHECKERBOARD_PLATFORM_SPAWNER,             3251, -1082, -6256,  0, 270, 0,  BPARAM1(1) | BPARAM2(75),  bhvCheckerboardElevatorGroup),
+    OBJECT( MODEL_VCUTM_CHECKERBOARD_PLATFORM_SPAWNER,             2355, -1901, -6256,  0, 270, 0,  BPARAM1(1) | BPARAM2(75),  bhvCheckerboardElevatorGroup),
+    OBJECT( MODEL_VCUTM_CHECKERBOARD_PLATFORM_SPAWNER,             1459, -1594, -6256,  0,  90, 0,  BPARAM1(1) | BPARAM2(75),  bhvCheckerboardElevatorGroup),
+    OBJECT( MODEL_VCUTM_CHECKERBOARD_PLATFORM_SPAWNER,            -1151, -2413, -6256,  0, 270, 0,  BPARAM1(1) | BPARAM2(75),  bhvCheckerboardElevatorGroup),
+    RETURN(),
+};
+
+static const LevelScript script_func_local_2[] = {
+    OBJECT( MODEL_CAP_SWITCH,  4506,  26, -6246,  0, 0, 0,  BPARAM2(0x02),  bhvCapSwitch),
+    RETURN(),
+};
+
+static const LevelScript script_func_local_3[] = {
+    OBJECT( MODEL_NONE,        4600, 250, -4500,  0, 0, 0,  BPARAM1(STAR_INDEX_ACT_1),  bhvHiddenRedCoinStar),
+    RETURN(),
+};
+
+const LevelScript level_vcutm_entry[] = {
+    INIT_LEVEL(),
+    LOAD_MIO0_TEXTURE( 0x09, _outside_mio0SegmentRomStart, _outside_mio0SegmentRomEnd),
+    LOAD_MIO0        ( 0x07, _vcutm_segment_7SegmentRomStart, _vcutm_segment_7SegmentRomEnd),
+    LOAD_MIO0        ( 0x05, _group8_mio0SegmentRomStart, _group8_mio0SegmentRomEnd),
+    LOAD_RAW         ( 0x0C, _group8_geoSegmentRomStart,  _group8_geoSegmentRomEnd),
+    LOAD_MIO0        ( 0x08, _common0_mio0SegmentRomStart, _common0_mio0SegmentRomEnd),
+    LOAD_RAW         ( 0x0F, _common0_geoSegmentRomStart,  _common0_geoSegmentRomEnd),
+    ALLOC_LEVEL_POOL(),
+    MARIO( MODEL_MARIO,  BPARAM4(0x01),  bhvMario),
+    JUMP_LINK(script_func_global_1),
+    JUMP_LINK(script_func_global_9),
+    LOAD_MODEL_FROM_GEO(MODEL_VCUTM_SEESAW_PLATFORM, vcutm_geo_0001F0),
+    LOAD_MODEL_FROM_GEO(MODEL_VCUTM_WARP_PIPE,       warp_pipe_geo),
+
+    AREA( 1, vcutm_geo_000208),
+        OBJECT( MODEL_NONE,  -6143, 6734, -6143,  0, 0, 0,  BPARAM2(WARP_NODE_0A),  bhvAirborneWarp),
+        WARP_NODE( WARP_NODE_0A,          LEVEL_VCUTM,           1,  WARP_NODE_0A,  WARP_NO_CHECKPOINT),
+        WARP_NODE( WARP_NODE_WARP_FLOOR,  LEVEL_CASTLE_GROUNDS,  1,  WARP_NODE_07,  WARP_NO_CHECKPOINT),
+        WARP_NODE( WARP_NODE_SUCCESS,     LEVEL_CASTLE_GROUNDS,  1,  WARP_NODE_08,  WARP_NO_CHECKPOINT),
+        WARP_NODE( WARP_NODE_DEATH,       LEVEL_CASTLE_GROUNDS,  1,  WARP_NODE_06,  WARP_NO_CHECKPOINT),
+        JUMP_LINK(script_func_local_3),
+        JUMP_LINK(script_func_local_1),
+        JUMP_LINK(script_func_local_2),
+        TERRAIN( vcutm_seg7_collision),
+        MACRO_OBJECTS( vcutm_seg7_macro_objs),
+        SHOW_DIALOG( 0x00, DIALOG_129),
+        SET_BACKGROUND_MUSIC( 0x0000,  SEQ_LEVEL_SLIDE),
+        TERRAIN_TYPE( TERRAIN_STONE),
+    END_AREA(),
+
+    FREE_LEVEL_POOL(),
+    MARIO_POS( 1,  0,  -6143, 5734, -6143),
+    CALL( 0,  lvl_init_or_update),
+    CALL_LOOP( 1,  lvl_init_or_update),
+    CLEAR_LEVEL(),
+    SLEEP_BEFORE_EXIT( 1),
+    EXIT(),
+};

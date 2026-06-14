@@ -1,0 +1,45 @@
+
+void bhv_sl_snowman_wind_loop(void) {
+    UNUSED s32 unused = 0;
+    s16 marioAngleFromWindSource;
+    Vec3f tempPos;
+
+    if (o->oTimer == 0) {
+        o->oSLSnowmanWindOriginalYaw = o->oMoveAngleYaw;
+    }
+
+    if (o->oSubAction == SL_SNOWMAN_WIND_ACT_IDLE) {
+        o->oDistanceToMario = 0;
+
+        vec3f_copy_2(tempPos, &o->oPosX);
+        obj_set_pos(o, 1100, 3328, 1164);
+        if (cur_obj_can_mario_activate_textbox(1000.0f, 30.0f, 0x7FFF)) {
+            o->oSubAction++;
+        }
+        vec3f_copy_2(&o->oPosX, tempPos);
+
+    } else if (o->oSubAction == SL_SNOWMAN_WIND_ACT_TALKING) {
+        if (cur_obj_update_dialog(MARIO_DIALOG_LOOK_UP, DIALOG_FLAG_TEXT_DEFAULT, DIALOG_153, 0)) {
+            o->oSubAction++;
+        }
+
+    } else if (o->oDistanceToMario < 1500.0f && absf(gMarioObject->oPosY - o->oHomeY) < 500.0f) {
+
+        if ((marioAngleFromWindSource = o->oAngleToMario - o->oSLSnowmanWindOriginalYaw) > 0) {
+            if (marioAngleFromWindSource < 0x1500) {
+                o->oMoveAngleYaw = o->oAngleToMario;
+            } else {
+                o->oMoveAngleYaw = o->oSLSnowmanWindOriginalYaw + 0x1500;
+            }
+        } else {
+            if (marioAngleFromWindSource > -0x1500) {
+                o->oMoveAngleYaw = o->oAngleToMario;
+            } else {
+                o->oMoveAngleYaw = o->oSLSnowmanWindOriginalYaw - 0x1500;
+            }
+        }
+
+        cur_obj_spawn_strong_wind_particles(12, 3.0f, 0, 0, 0);
+        cur_obj_play_sound_1(SOUND_AIR_BLOW_WIND);
+    }
+}

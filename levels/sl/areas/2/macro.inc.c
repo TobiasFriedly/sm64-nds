@@ -1,0 +1,22 @@
+
+const MacroObject sl_seg7_area_2_macro_objs[] = {
+    MACRO_OBJECT( macro_yellow_coin_2,                  0,   1740,     0,   900),
+    MACRO_OBJECT( macro_yellow_coin_2,                  0,   1440,     0,   900),
+    MACRO_OBJECT( macro_yellow_coin_2,                  0,   1140,     0,   900),
+    MACRO_OBJECT( macro_goomba,                         0,   1760,     0,   200),
+    MACRO_OBJECT( macro_spindrift,                      0,   1600,    80,  -800),
+    MACRO_OBJECT( macro_box_vanish_cap,                 0,   1660,   300, -1720),
+    MACRO_OBJECT( macro_box_three_coins,                0,   -720,   300, -1740),
+    MACRO_OBJECT( macro_bobomb_buddy_opens_cannon_1,    0,  -1400,     0, -1740),
+    MACRO_OBJECT( macro_goomba,                         0,    -20,     0,   960),
+    MACRO_OBJECT( macro_goomba,                         0,    320,     0, -1220),
+    MACRO_OBJECT( macro_spindrift,                      0,   -860,    40,  2040),
+    MACRO_OBJECT( macro_spindrift,                      0,    800,    60,  2000),
+    MACRO_OBJECT( macro_coin_line_horizontal,          90,   1500,     0,   500),
+    MACRO_OBJECT( macro_coin_line_horizontal_flying,   90,   1500,   100,   500),
+    MACRO_OBJECT( macro_coin_line_horizontal_flying,   90,   1500,   200,   500),
+    MACRO_OBJECT( macro_coin_line_horizontal_flying,   90,   1500,   300,   500),
+    MACRO_OBJECT( macro_1up,                            0,   1700,    20,  -100),
+    MACRO_OBJECT( macro_box_1up_running_away,           0,   -120,   300, -1740),
+    MACRO_OBJECT_END(),
+};

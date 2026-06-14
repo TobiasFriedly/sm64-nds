@@ -1,0 +1,21 @@
+
+const MacroObject sa_seg7_macro_objs[] = {
+    MACRO_OBJECT               ( macro_red_coin,                       0,  -2400, -4607, -2400),
+    MACRO_OBJECT               ( macro_red_coin,                       0,  -2400, -4607,  2400),
+    MACRO_OBJECT               ( macro_red_coin,                       0,   2400, -4607,  2400),
+    MACRO_OBJECT               ( macro_red_coin,                       0,   2400, -4607, -2400),
+    MACRO_OBJECT               ( macro_red_coin,                       0,      0, -2200, -1500),
+    MACRO_OBJECT               ( macro_red_coin,                       0,  -1500, -2200,     0),
+    MACRO_OBJECT               ( macro_red_coin,                       0,      0, -2200,  1500),
+    MACRO_OBJECT               ( macro_red_coin,                       0,   1500, -2200,     0),
+    MACRO_OBJECT               ( macro_fish_spawner_few_blue,          0,   1927, -2909,     0),
+    MACRO_OBJECT               ( macro_coin_ring_vertical_flying,     90,      0, -2400, -1500),
+    MACRO_OBJECT               ( macro_coin_ring_vertical_flying,      0,  -1500, -2400,     0),
+    MACRO_OBJECT               ( macro_coin_ring_vertical_flying,     90,      0, -2400,  1500),
+    MACRO_OBJECT               ( macro_coin_ring_vertical_flying,      0,   1500, -2400,     0),
+    MACRO_OBJECT               ( macro_hidden_1up_trigger,             0,      0, -3500,     0),
+    MACRO_OBJECT_WITH_BHV_PARAM( macro_hidden_1up,                     0,      0, -3800,     0,  1),
+    MACRO_OBJECT               ( macro_coin_ring_horizontal_flying,    0,      0, -3500,     0),
+    MACRO_OBJECT               ( macro_fish_spawner_few_cyan,          0,  -1000, -4080, -1740),
+    MACRO_OBJECT_END(),
+};

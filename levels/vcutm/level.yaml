@@ -1,0 +1,13 @@
+
+short-name: vcutm
+full-name: Vanish Cap under the Moat
+texture-file: ["/texture.inc.c"]
+area-count: 1
+objects: [seesaw]
+shared-path: []
+
+skybox-bin: null
+texture-bin: outside
+effects: false
+actor-bins: [group8]
+common-bin: [common0]

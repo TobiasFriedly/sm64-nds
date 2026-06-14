@@ -1,0 +1,22 @@
+
+const MacroObject ddd_seg7_area_1_macro_objs[] = {
+    MACRO_OBJECT               ( macro_seaweed_bundle,               0,  -2880, -5120, -1850),
+    MACRO_OBJECT               ( macro_clam_shell,                  90,  -4760, -5120,   580),
+    MACRO_OBJECT               ( macro_seaweed_bundle,               0,  -3510, -5120,  1950),
+    MACRO_OBJECT               ( macro_hidden_1up_trigger,           0,  -4760, -5100,   580),
+    MACRO_OBJECT_WITH_BHV_PARAM( macro_hidden_1up,                   0,  -4760, -5080,   580,  1),
+    MACRO_OBJECT               ( macro_coin_ring_vertical_flying,   90,  -1000, -4250,     0),
+    MACRO_OBJECT               ( macro_fish_spawner_few_blue,        0,  -4646, -4615,  -800),
+    MACRO_OBJECT               ( macro_fish_spawner_few_cyan,        0,  -1804, -2560,  1292),
+    MACRO_OBJECT               ( macro_coin_line_vertical_flying,    0,  -3760, -4560,   660),
+    MACRO_OBJECT               ( macro_coin_line_vertical_flying,    0,  -4240, -4786,  1180),
+    MACRO_OBJECT               ( macro_coin_line_horizontal,       315,  -4840, -1137,  1860),
+    MACRO_OBJECT               ( macro_yellow_coin_2,                0,  -2180, -5119,  1720),
+    MACRO_OBJECT               ( macro_yellow_coin_2,                0,  -1460, -5119,  1300),
+    MACRO_OBJECT               ( macro_yellow_coin_2,                0,  -1320, -5119,   840),
+    MACRO_OBJECT               ( macro_fish_spawner_few_blue,        0,  -3580, -2280, -1120),
+    MACRO_OBJECT               ( macro_fish_spawner_few_blue,        0,  -2020, -3460,  -120),
+    MACRO_OBJECT               ( macro_coin_ring_vertical_flying,   90,      0, -4250,     0),
+    MACRO_OBJECT               ( macro_coin_ring_vertical_flying,   90,  -2000, -4250,     0),
+    MACRO_OBJECT_END(),
+};

@@ -1,0 +1,16 @@
+
+const Trajectory ttm_seg7_trajectory_070170A0[] = {
+    TRAJECTORY_POS(0,  -1541,   514, -2125),
+    TRAJECTORY_POS(1,   -843,   410, -2302),
+    TRAJECTORY_POS(2,   -792,   357, -3132),
+    TRAJECTORY_POS(3,   -211,   189, -3153),
+    TRAJECTORY_POS(4,    474,   -31, -2635),
+    TRAJECTORY_POS(5,    944,  -136, -3098),
+    TRAJECTORY_POS(6,   1391,  -157, -3484),
+    TRAJECTORY_POS(7,   1999,  -378, -3257),
+    TRAJECTORY_POS(8,   2475,  -600, -2692),
+    TRAJECTORY_POS(9,   3445,  -952, -2115),
+    TRAJECTORY_POS(10,   3926,  -984,  -681),
+    TRAJECTORY_POS(11,   4281, -3326,   460),
+    TRAJECTORY_END(),
+};

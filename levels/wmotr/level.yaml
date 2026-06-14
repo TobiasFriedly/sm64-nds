@@ -1,0 +1,13 @@
+
+short-name: wmotr
+full-name: Wing Mario over the Rainbow
+texture-file: ["/texture.inc.c"]
+area-count: 1
+objects: []
+shared-path: []
+
+skybox-bin: cloud_floor
+texture-bin: sky
+effects: false
+actor-bins: [group2, group17]
+common-bin: [common0]
