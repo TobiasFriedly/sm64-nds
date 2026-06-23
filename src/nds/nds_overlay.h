@@ -6,8 +6,6 @@
 #define NDS_OVERLAY_BASE    ((void *)0x02280000)
 #define NDS_OVERLAY_SIZE    0x00100000
 
-void nds_overlay_init(void);
-
 s32 nds_load_level_overlay(s32 levelId);
 
 u8 *nds_load_sound_data(const char *filename, u32 *outSize);

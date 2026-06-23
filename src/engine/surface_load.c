@@ -709,6 +709,8 @@ void transform_object_vertices(TerrainData **data, TerrainData *vertexData) {
     numVertices = *(*data);
     (*data)++;
 
+    sTerrainNumVertices = numVertices;
+
     vertices = *data;
 
     if (gCurrentObject->header.gfx.throwMatrix == NULL) {

@@ -70,3 +70,9 @@ build/*
 !/sound/**/*custom*/**/*.aiff
 !/assets/**/*custom*.bin
 !/assets/**/*custom*/**/*.bin
+
+.DS_Store
+**/.DS_Store
+
+.DS_Store
+**/.DS_Store

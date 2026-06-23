@@ -50,10 +50,6 @@ static const char *sLevelOverlayNames[] = {
 
 static s32 sCurrentOverlayLevel = -1;
 
-void nds_overlay_init(void) {
-    nitroFSInit(NULL);
-}
-
 s32 nds_load_level_overlay(s32 levelId) {
     char path[64];
     FILE *f;
