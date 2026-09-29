@@ -1,7 +1,10 @@
-# SM64 — Nintendo DS port + Multiplayer 
+# SM64
+# Nintendo DS port + Multiplayer 
 
 A Modification of the DSi port from Hydr8gon: https://github.com/Hydr8gon/sm64 
 Making it work on all NDS Models. Also added Multiplayer.
+
+Some big performance updates and Multiplayer for more than 2 players is coming soon.
 
 ---
 
